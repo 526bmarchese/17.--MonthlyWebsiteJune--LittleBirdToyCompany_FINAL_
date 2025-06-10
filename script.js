@@ -47,7 +47,7 @@ const products = [
     }
 ];
 
-// ccustomer reviews
+// customer reviews
 const customerReviews = [
     {
         name: "Sarah",
