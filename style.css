@@ -1,4 +1,3 @@
-/*global styles*/
 :root {
     --primary-color: #ff6b35;
     --secondary-color: #2b9eb3;
@@ -15,10 +14,16 @@ body {
     line-height: 1.6;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: var(--font-secondary);
     font-weight: 600;
 }
+
 .navbar {
     padding: 1rem 0;
     background-color: white;
@@ -103,6 +108,7 @@ h1, h2, h3, h4, h5, h6 {
     border-color: var(--secondary-color);
     color: white;
 }
+
 .featured-products {
     padding: 5rem 0;
 }
@@ -133,6 +139,7 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 600;
     color: var(--secondary-color);
 }
+
 .about-preview {
     background-color: #f9f9f9;
 }
@@ -141,6 +148,7 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--primary-color);
     margin-bottom: 1.5rem;
 }
+
 footer {
     background-color: var(--dark-color);
     color: white;
@@ -172,16 +180,17 @@ footer a:hover {
 .social-icons a:hover {
     transform: translateY(-3px);
 }
+
 @media (max-width: 992px) {
     .hero-section {
         text-align: center;
         padding: 4rem 0;
     }
-    
+
     .hero-image {
         margin-top: 2rem;
     }
-    
+
     .about-preview .col-lg-6:last-child {
         margin-top: 2rem;
     }
@@ -191,25 +200,148 @@ footer a:hover {
     .hero-section h1 {
         font-size: 2.5rem;
     }
-    
+
     .hero-section .lead {
         font-size: 1.25rem;
     }
-    
+
     .featured-products {
         padding: 3rem 0;
     }
+}
+
+/* About Page Styles */
+.about-story,
+.visit-us {
+    position: relative;
+    z-index: 1;
+}
+
+.about-story h1,
+.quality-sustainability h2,
+.visit-us h2 {
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+    position: relative;
+    display: inline-block;
+}
+
+.about-story h1::after,
+.quality-sustainability h2::after,
+.visit-us h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: var(--accent-color);
+}
+
+.image-collage img {
+    transition: transform 0.3s ease-in-out;
+}
+
+.image-collage img:hover {
+    transform: scale(1.03);
+}
+
+/* Team Section Styles */
+.team-img-wrapper {
+    width: 180px;
+    height: 180px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin: 0 auto;
+    border: 5px solid var(--light-color);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.team-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.team-member {
+    padding: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.team-member:hover {
+    transform: translateY(-10px);
+}
+
+.team-member:hover .team-img-wrapper {
+    transform: scale(1.05);
+    border-color: var(--primary-color);
+}
+
+/* Testimonial Section Styles */
+.testimonials {
+    position: relative;
+}
+
+.testimonials::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('imgs/LBTCo-BW-bird-logo-cropped.png');
+    background-repeat: no-repeat;
+    background-position: right -50px bottom -50px;
+    background-size: 200px;
+    opacity: 0.1;
+}
+
+.testimonial-card {
+    border-radius: 10px;
+    padding: 1.5rem;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.testimonial-rating {
+    color: var(--accent-color);
+}
+
+.testimonial-location {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.quality-sustainability .card {
+    border: none;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.quality-sustainability .card:hover {
+    transform: translateY(-5px);
 }
 
 @media (max-width: 576px) {
     .hero-section {
         padding: 3rem 0;
     }
-    
+
     .hero-section h1 {
         font-size: 2rem;
     }
-    
+
     .btn-lg {
         padding: 0.5rem 1rem;
         font-size: 1rem;
