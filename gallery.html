@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
 
@@ -33,13 +34,13 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                            <a class="nav-link" href="index.html">Home</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="about.html">About Us</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="gallery.html">Our Toys</a>
+                            <a class="nav-link active" aria-current="page" href="gallery.html">Our Toys</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="contact.html">Contact Us</a>
@@ -50,6 +51,67 @@
         </nav>
     </header>
     <main>
+        <section class="toy-banner py-3">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <h1>Our Wooden Toys</h1>
+                        <p>Discover our handcrafted wooden toys, made with love and care</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="toy-gallery py-4">
+            <div class="container">
+                <div class="row mb-3">
+                    <div class="col-12">
+                        <div class="category-filter">
+                            <button class="btn btn-outline-secondary active" data-category="all">All Toys</button>
+                            <button class="btn btn-outline-secondary" data-category="train">Trains</button>
+                            <button class="btn btn-outline-secondary" data-category="car">Cars</button>
+                            <button class="btn btn-outline-secondary" data-category="plane">Planes</button>
+                            <button class="btn btn-outline-secondary" data-category="boat">Boats</button>
+                            <button class="btn btn-outline-secondary" data-category="block">Building Blocks</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="row" id="product-container">
+                    <!-- Products will be dynamically inserted here -->
+                </div>
+            </div>
+        </section>
+
+        <section class="customer-reviews py-4">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 text-center mb-4">
+                        <h2>What Our Customers Say</h2>
+                    </div>
+                </div>
+                <div class="row" id="reviews-container">
+                    <!-- Reviews will be dynamically inserted here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Product Detail Modal -->
+        <div class="modal fade" id="productModal" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="productModalLabel">Product Details</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body" id="modal-content">
+                        <!-- Product details will be inserted here -->
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
     <footer class="text-light py-4">
         <div class="container">
@@ -104,7 +166,7 @@
         rel="stylesheet">
 
     <!-- Custom JavaScript -->
-    <script src="script.js"></script>
+    <script src="gallery.js"></script>
 </body>
 
 </html>
