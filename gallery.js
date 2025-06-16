@@ -125,27 +125,27 @@ const products = [
 // Customer reviews data
 const reviews = [
     {
-        name: "Samantha",
+        name: "Will Smith",
         review: "The wooden train set is incredibly well-made! My son hasn't stopped playing with it since it arrived.",
         rating: 5
     },
     {
-        name: "Michael",
+        name: "Paris Hilton",
         review: "Beautiful craftsmanship on the building blocks. Worth every penny for a toy that will last generations.",
         rating: 5
     },
     {
-        name: "Jennifer",
+        name: "AJ & Big Justice",
         review: "The wooden plane is gorgeous but one of the wheels wasn't attached properly. Customer service was great at resolving the issue though.",
         rating: 4
     },
     {
-        name: "David",
+        name: "IShowSpeed",
         review: "These toys remind me of the ones I had as a child. So glad to find a company still making them with such quality.",
         rating: 5
     },
     {
-        name: "Lisa",
+        name: "Kai Cenat",
         review: "My daughter loves her new wooden boat. It actually floats in the bathtub which is a big hit!",
         rating: 5
     }
