@@ -1,101 +1,119 @@
+/* The :root selector defines global CSS variables that can be used throughout the stylesheet */
 :root {
-    --primary-color: #ff6b35;
-    --secondary-color: #2b9eb3;
-    --accent-color: #ffd166;
-    --dark-color: #2f2f2f;
-    --light-color: #f8f9fa;
-    --font-primary: 'Montserrat', sans-serif;
-    --font-secondary: 'Poppins', sans-serif;
+    --primary-color: #ff6b35;      /* Main brand color (orange) */
+    --secondary-color: #2b9eb3;    /* Secondary brand color (blue) */
+    --accent-color: #ffd166;       /* Accent color for highlights (yellow) */
+    --dark-color: #2f2f2f;         /* Dark color for text and elements (near black) */
+    --light-color: #f8f9fa;        /* Light color for backgrounds (off-white) */
+    --font-primary: 'Montserrat', sans-serif;  /* Main font for regular text */
+    --font-secondary: 'Poppins', sans-serif;   /* Secondary font for headings */
 }
 
+/* Styles for the entire body element */
 body {
-    font-family: var(--font-primary);
-    color: var(--dark-color);
-    line-height: 1.6;
+    font-family: var(--font-primary);  /* Use the primary font we defined in :root */
+    color: var(--dark-color);          /* Set the text color to our dark color */
+    line-height: 1.6;                  /* Set line height for better readability (1.6 times the font size) */
 }
 
+/* Styles for all heading elements (h1 through h6) */
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-    font-family: var(--font-secondary);
-    font-weight: 600;
+    font-family: var(--font-secondary);  /* Use the secondary font for headings */
+    font-weight: 600;                    /* Make headings semi-bold (600 is between normal 400 and bold 700) */
 }
 
+/* Styles for the navigation bar */
 .navbar {
-    padding: 1rem 0;
-    background-color: white;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+    padding: 1rem 0;                           /* Add padding above and below the navbar (1rem = 16px) */
+    background-color: white;                   /* Set the background color to white */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08); /* Add a subtle shadow effect below the navbar */
 }
 
+/* Styles for the brand logo/text in the navbar */
 .navbar-brand {
-    font-weight: 700;
-    color: var(--primary-color);
-    display: flex;
-    align-items: center;
-    gap: 10px;
+    font-weight: 700;                /* Make the brand text bold (700 is bold) */
+    color: var(--primary-color);     /* Use our primary color for the brand text */
+    display: flex;                   /* Use flexbox for layout */
+    align-items: center;             /* Center items vertically */
+    gap: 10px;                       /* Add 10px spacing between logo image and text */
 }
 
+/* Style specifically for the text part of the brand */
 .navbar-brand span {
-    font-size: 1.5rem;
+    font-size: 1.5rem;               /* Make the brand text larger (1.5rem = 24px) */
 }
 
+/* Styles for the navigation links */
 .navbar-light .navbar-nav .nav-link {
-    color: var(--dark-color);
-    font-weight: 500;
-    padding: 0.5rem 1rem;
-    transition: color 0.3s ease;
+    color: var(--dark-color);       /* Use our dark color for the links */
+    font-weight: 500;               /* Make links medium-weight (500 is medium) */
+    padding: 0.5rem 1rem;           /* Add padding around links (top/bottom: 0.5rem, left/right: 1rem) */
+    transition: color 0.3s ease;    /* Smooth color transition for hover effect (0.3s = 300 milliseconds) */
 }
 
+/* Special styles for navigation links when hovered or active (current page) */
 .navbar-light .navbar-nav .nav-link:hover,
 .navbar-light .navbar-nav .nav-link.active {
-    color: var(--primary-color);
+    color: var(--primary-color);    /* Change the color to our primary color */
 }
 
+/* Styles for the hero section (main banner at top of page) */
 .hero-section {
-    padding: 5rem 0;
-    background-color: var(--light-color);
+    padding: 5rem 0;                   /* Add large padding above and below (5rem = 80px) */
+    background-color: var(--light-color); /* Use our light color for the background */
 }
 
+/* Style for the main heading in the hero section */
 .hero-section h1 {
-    font-size: 3rem;
-    margin-bottom: 1.5rem;
-    color: var(--primary-color);
+    font-size: 3rem;                   /* Make the heading very large (3rem = 48px) */
+    margin-bottom: 1.5rem;             /* Add space below the heading (1.5rem = 24px) */
+    color: var(--primary-color);       /* Use our primary color for the heading */
 }
 
+/* Style for the lead paragraph in the hero section */
 .hero-section .lead {
-    font-size: 1.5rem;
-    margin-bottom: 1.5rem;
+    font-size: 1.5rem;                 /* Make this text larger than normal (1.5rem = 24px) */
+    margin-bottom: 1.5rem;             /* Add space below the paragraph (1.5rem = 24px) */
 }
 
+/* Style for images in the hero section */
 .hero-image img {
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease;    /* Set up a smooth transition for the hover effect (0.3s = 300ms) */
 }
 
+/* What happens when you hover over an image in the hero section */
 .hero-image img:hover {
-    transform: scale(1.02);
+    transform: scale(1.02);             /* Make the image slightly larger (102% of original size) */
 }
 
+/* Style for the primary button (often used for important actions) */
 .btn-primary {
-    background-color: var(--primary-color);
-    border-color: var(--primary-color);
+    background-color: var(--primary-color);  /* Button background uses our primary color */
+    border-color: var(--primary-color);      /* Button border uses our primary color */
 }
 
+/* What happens when you hover over a primary button */
 .btn-primary:hover {
-    background-color: #e55a25;
-    border-color: #e55a25;
+    background-color: #e55a25;         /* Darken the button background slightly */
+    border-color: #e55a25;             /* Darken the button border slightly */
 }
 
+/* Style for outline primary buttons (transparent with colored border) */
 .btn-outline-primary {
-    color: var(--primary-color);
-    border-color: var(--primary-color);
+    color: var(--primary-color);           /* Text color uses our primary color */
+    border-color: var(--primary-color);    /* Border color uses our primary color */
 }
 
+/* What happens when you hover over an outline primary button */
 .btn-outline-primary:hover {
-    background-color: var(--primary-color);
-    border-color: var(--primary-color);
+    background-color: var(--primary-color);  /* Fill the button with our primary color on hover */
+    border-color: var(--primary-color);      /* Keep the same border color */
+    /* Note: The text color automatically changes to white on hover because of Bootstrap's default behavior */
 }
 
 .btn-outline-secondary {
